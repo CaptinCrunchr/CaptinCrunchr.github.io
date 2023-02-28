@@ -1,10 +1,42 @@
-a.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.maindiv{
+    /* width: 300px;
+  height: 100px;
+  background-color: blueviolet;
+  border-radius: 8px;
+  text-align: center; */
+  /* border-radius: 40px; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* width: 300px;
+  height: 100px; */
+  background-color: #5A5A5A;
+}
+.aspectwrapper {
+    display: inline-block; /* shrink to fit */
+    width: 20%;
+    height: 20%;           /* whatever width you like */
+    position: relative;    /* so .content can use position: absolute */
+  }
+  .aspectwrapper::after {
+    padding-top: 56.25%; /* percentage of containing block _width_ */
+    display: block;
+    content: '';
+  }
+  .maindiv {
+    display: flex;
+  justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
+    outline: thin dashed green;            /* just so you can see the box */
+  }
+  .maindiv2 {
+    
+    display: flex;
+    justify-content: center;
+      align-items: center;
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
+    /* outline: thin dashed green;            just so you can see the box */
   }
