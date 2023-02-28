@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="signupcss.css">
+        <link rel="stylesheet" href="main.css">
+    </head>
+<body>
+<table>
+    <div class="aspectwrapper">
+            <tr>
+                <div class="maindiv"> 
+                <h1 style="text-align: center; margin-top: -200px;">Zar's Time sheet</h1>
+                </div>
+            </tr>
+            <tr>
+                <div class="maindiv2">
+                    <button onclick= "clockin()" type="button" class="signbtn">Clock In</button>
+                    <button onclick= "clockout()" type="button" class="signbtn">Clock Out</button>
+                </div>
+            </tr>
+    </div>
+</table>
+<script>
+    function clockin() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1080027465222737920/ykD70hvzS4cwcFNzURqp-ab4iKHujjw5bEWSiiostlCGpMtj7enKSg2tdy58o2Th9vlp");
+        request.setRequestHeader('Content-type', 'application/json');
+        const params = {
+        username: "Money",
+        avatar_url: "",
+        content: "Zar Clocked in...."}
+        request.send(JSON.stringify(params));
+    }
+    function clockout() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1080027465222737920/ykD70hvzS4cwcFNzURqp-ab4iKHujjw5bEWSiiostlCGpMtj7enKSg2tdy58o2Th9vlp");
+        request.setRequestHeader('Content-type', 'application/json');
+        const params = {
+        username: "Money",
+        avatar_url: "",
+        content: "Zar Clocked Out... \n================================================"}
+        request.send(JSON.stringify(params));
+    }
+</script>
+</body>
+</html>
